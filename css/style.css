@@ -1,0 +1,321 @@
+/*@use './styles/_variables';
+@use './styles/_font';*/
+footer {
+  padding: 20px;
+  background-image: linear-gradient(to top, aquamarine, white);
+}
+footer .contacto p {
+  font-family: "Overlock", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: green;
+  text-align: left;
+  font-size: small;
+}
+footer .contacto h4 {
+  font-family: "Overlock", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: green;
+  text-align: left;
+  font-size: large;
+}
+footer .redes p {
+  font-family: "Overlock", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: green;
+  text-align: rigth;
+  font-size: small;
+}
+footer .redes h4 {
+  font-family: "Overlock", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: green;
+  text-align: rigth;
+  font-size: large;
+}
+footer h5 {
+  font-family: "Overlock", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: green;
+  text-align: center;
+  font-size: large;
+}
+@media (min-width: 750px) {
+  footer .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-template-areas: "contacto redes" "derecho derecho";
+    column-gap: 20px;
+    row-gap: 10px;
+  }
+  footer .contacto {
+    grid-area: contacto;
+    text-align: left;
+    margin: 20px;
+  }
+  footer .redes {
+    grid-area: redes;
+    text-align: right;
+    margin: 20px;
+  }
+  footer .derecho {
+    grid-area: derecho;
+    text-align: center;
+  }
+}
+
+header h1 {
+  font-family: "Overlock", serif;
+  font-weight: 1200;
+  font-style: italic;
+  color: green;
+  text-align: center;
+  font-size: xx-large;
+}
+header .menu__principal {
+  background-image: linear-gradient(to bottom, aquamarine, white);
+}
+
+main .p__principal {
+  font-family: "Overlock", serif;
+  font-weight: 1200;
+  font-style: italic;
+  color: green;
+  text-align: left;
+  font-size: 20px;
+  padding: 20px;
+}
+@media (min-width: 1200px) {
+  main .p__principal {
+    font-family: "Overlock", serif;
+    font-weight: 1200;
+    font-style: italic;
+    color: green;
+    text-align: left;
+    font-size: 22px;
+    padding: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  main .p__principal {
+    font-family: "Overlock", serif;
+    font-weight: 1200;
+    font-style: italic;
+    color: green;
+    text-align: left;
+    font-size: 24px;
+    padding: 20px;
+  }
+}
+main .zoom {
+  overflow: hidden;
+}
+main .zoom .imagen {
+  transition: 0.35;
+}
+main .zoom .imagen:hover {
+  transform: scale(2);
+}
+main .list-group .active {
+  background-color: aquamarine;
+  color: black;
+  border: green;
+}
+main .card-title {
+  font-family: "Overlock", serif;
+  font-weight: 1200;
+  font-style: italic;
+  color: green;
+  text-align: center;
+  font-size: 22px;
+}
+main .card-text {
+  font-family: "Overlock", serif;
+  font-weight: 1200;
+  font-style: normal;
+  color: black;
+  text-align: left;
+  font-size: 18px;
+}
+main h3 {
+  font-family: "Overlock", serif;
+  font-weight: 1400;
+  font-style: italic;
+  color: green;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+}
+main p {
+  font-family: "Overlock", serif;
+  font-weight: 1200;
+  font-style: italic;
+  color: black;
+  text-align: left;
+  font-size: 18px;
+}
+
+.container-anima {
+  padding: 30px;
+  align-items: center;
+}
+.container-anima #hermanos {
+  position: absolute;
+  transition: 0.5s;
+}
+
+#hermanos:hover {
+  opacity: 0;
+}
+
+/*
+header{
+    h1{
+        @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, center, xx-large);
+     }
+    .menu__principal{
+        background-image: linear-gradient(to bottom, variables.$secondary-color, white);
+    }
+
+
+}
+
+main{
+
+    .p__principal{
+        @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,20px);
+        padding: 20px;
+        @media (min-width: 1200px){
+
+            @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,22px);
+            padding: 20px;
+
+            }
+            @media (min-width: 1400px){
+
+                @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,24px);
+                padding: 20px;
+
+                }
+        }
+
+
+    .zoom{
+        overflow:hidden;
+        .imagen{
+            transition:0.35;
+        }
+        .imagen:hover{
+            transform:scale(2);
+        }
+    }
+
+.list-group {
+    .active{
+    background-color: variables.$secondary-color;
+    color: black;
+    border:variables.$primary-color;
+}
+}
+.card-title{
+    @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, center,22px);
+
+}
+.card-text{
+    @include font.font-format(variables.$fonts-primary, 1200, normal, black, left,18px);
+}
+
+h3{
+    @include font.font-format(variables.$fonts-primary, 1400, italic, variables.$primary-color, center,24px);
+    padding: 20px;
+}
+
+p{ @include font.font-format(variables.$fonts-primary, 1200, italic, black, left,18px);}
+}
+
+
+
+.container-anima{ 
+    padding:30px;
+    align-items: center;
+    #hermanos {
+    position: absolute;
+    transition: 0.5s;
+}
+}
+ #hermanos:hover{
+    opacity:0;
+ }
+
+
+
+footer{
+    padding: 20px;
+   .contacto {
+        p{
+            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,small);
+        }
+        h4{
+            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,large);
+        }
+    }
+
+    .redes {
+        p{
+            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, rigth,small);
+        }
+        h4{
+            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, rigth,large);
+        }
+
+    }
+
+   h5{
+     @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, center,large);
+    }
+
+
+    background-image: linear-gradient(to top, variables.$secondary-color, white);
+
+    @media (min-width: 750px){
+        .contenedor{
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px auto;
+            grid-template-areas:
+                "contacto redes"
+                "derecho derecho";
+            column-gap: 20px;
+            row-gap: 10px;
+        }
+
+        .contacto {
+            grid-area: contacto;
+           text-align: left;
+            margin: 20px
+
+        }
+
+        .redes {
+            grid-area: redes;
+            text-align: right;
+            margin:20px;
+        }
+
+        .derecho {
+            grid-area: derecho;
+            text-align: center;
+        }
+
+        }
+}
+
+*/
+
+/*# sourceMappingURL=style.css.map */

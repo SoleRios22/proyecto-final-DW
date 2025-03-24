@@ -1,0 +1,9 @@
+@use '_variables';
+@mixin font-format($family,$weigth,$style,$color,$align,$size){
+    font-family: $family;
+    font-weight: $weigth;
+    font-style: $style;
+    color: $color;
+    text-align: $align;
+    font-size: $size;
+}

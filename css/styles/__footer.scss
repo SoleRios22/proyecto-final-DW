@@ -1,0 +1,64 @@
+@use '_variables';
+@use '_font';
+
+footer{
+    padding: 20px;
+   .contacto {
+        p{
+            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,small);
+        }
+        h4{
+            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,large);
+        }
+    }
+
+    .redes {
+        p{
+            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, rigth,small);
+        }
+        h4{
+            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, rigth,large);
+        }
+        
+    }
+
+   h5{
+     @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, center,large);
+    }
+ 
+    
+    background-image: linear-gradient(to top, variables.$secondary-color, white);
+
+    @media (min-width: 750px){
+        .contenedor{
+          
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px auto;
+            grid-template-areas:
+                "contacto redes"
+                "derecho derecho";
+            column-gap: 20px;
+            row-gap: 10px;
+        }
+        
+        .contacto {
+            grid-area: contacto;
+           text-align: left;
+            margin: 20px
+        
+        }
+        
+        .redes {
+            grid-area: redes;
+            text-align: right;
+            margin:20px;
+        }
+        
+        .derecho {
+            grid-area: derecho;
+            text-align: center;
+        }
+        
+        }
+}
