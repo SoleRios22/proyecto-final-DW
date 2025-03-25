@@ -3,6 +3,7 @@
 
 footer{
     padding: 20px;
+    position:sticky;
    .contacto {
         p{
             @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,small);

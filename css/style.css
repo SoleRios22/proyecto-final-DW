@@ -1,7 +1,9 @@
+@charset "UTF-8";
 /*@use './styles/_variables';
 @use './styles/_font';*/
 footer {
   padding: 20px;
+  position: sticky;
   background-image: linear-gradient(to top, aquamarine, white);
 }
 footer .contacto p {
@@ -171,6 +173,20 @@ main p {
 
 #hermanos:hover {
   opacity: 0;
+}
+
+.lista {
+  padding: 40px;
+  position: sticky;
+  top: 40px; /* Asegura que se pegue a la parte superior */
+  background-color: white; /* O el color de fondo que prefieras */
+  z-index: 100; /* Asegura que esté por encima del contenido */
+  /* Otros estilos para la barra de navegación */
+}
+
+.contenido {
+  /* Estilos para el contenido principal */
+  height: auto; /* Ejemplo para generar scroll */
 }
 
 /*
