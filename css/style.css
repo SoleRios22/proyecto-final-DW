@@ -2,71 +2,60 @@
 /*@use './styles/_variables';
 @use './styles/_font';*/
 footer {
-  padding: 20px;
-  position: sticky;
   background-image: linear-gradient(to top, aquamarine, white);
-}
-footer .contacto p {
-  font-family: "Overlock", serif;
-  font-weight: 700;
-  font-style: normal;
   color: green;
-  text-align: left;
-  font-size: small;
-}
-footer .contacto h4 {
-  font-family: "Overlock", serif;
-  font-weight: 700;
-  font-style: normal;
-  color: green;
-  text-align: left;
-  font-size: large;
-}
-footer .redes p {
-  font-family: "Overlock", serif;
-  font-weight: 700;
-  font-style: normal;
-  color: green;
-  text-align: rigth;
-  font-size: small;
-}
-footer .redes h4 {
-  font-family: "Overlock", serif;
-  font-weight: 700;
-  font-style: normal;
-  color: green;
-  text-align: rigth;
-  font-size: large;
-}
-footer h5 {
-  font-family: "Overlock", serif;
-  font-weight: 700;
-  font-style: normal;
-  color: green;
+  padding: 20px;
   text-align: center;
-  font-size: large;
 }
-@media (min-width: 750px) {
+footer .contenedor {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-areas: "contacto" "redes" "derecho";
+}
+footer .contenedor .contacto {
+  grid-area: contacto;
+}
+footer .contenedor .redes {
+  grid-area: redes;
+}
+footer .contenedor .derecho {
+  grid-area: derecho;
+}
+footer .contenedor {
+  padding: 15px;
+}
+footer .contenedor h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: black;
+}
+footer .contenedor ul {
+  list-style: none;
+  padding: 0;
+}
+footer .contenedor ul li {
+  margin-bottom: 5px;
+}
+footer .contenedor a {
+  color: black;
+  text-decoration: none;
+}
+footer .derecho {
+  padding-top: 15px;
+  border-top: 1px solid #555;
+  font-size: 0.9em;
+}
+@media (min-width: 576px) and (max-width: 992px) {
   footer .contenedor {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px auto;
     grid-template-areas: "contacto redes" "derecho derecho";
-    column-gap: 20px;
-    row-gap: 10px;
   }
-  footer .contacto {
-    grid-area: contacto;
-    text-align: left;
-    margin: 20px;
-  }
-  footer .redes {
-    grid-area: redes;
-    text-align: right;
-    margin: 20px;
-  }
-  footer .derecho {
-    grid-area: derecho;
+}
+@media (min-width: 992px) {
+  footer .contenedor {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas: "contacto none redes" "derecho derecho derecho";
     text-align: center;
   }
 }
@@ -82,38 +71,73 @@ header h1 {
 header .menu__principal {
   background-image: linear-gradient(to bottom, aquamarine, white);
 }
+header .icono-enlacemail {
+  display: inline-block; /* O block, según tu diseño */
+  width: 40px; /* Ancho del icono */
+  height: 10px; /* Alto del icono */
+  background-image: url("../../img/gmail2.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
+  text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
+  overflow: hidden; /* Asegura que el texto oculto no cause problemas */
+  padding: 18px;
+  opacity: 0.9;
+}
+header .icono-enlacemail:hover {
+  opacity: 0.5;
+}
+header .icono-enlacewhat {
+  display: inline-block; /* O block, según tu diseño */
+  width: 40px; /* Ancho del icono */
+  height: 10px; /* Alto del icono */
+  background-image: url("../../img/whatapps2.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
+  text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
+  overflow: hidden; /* Asegura que el texto oculto no cause problemas */
+  padding: 18px;
+  opacity: 0.9;
+}
+header .icono-enlacewhat:hover {
+  opacity: 0.5;
+}
+header .icono-enlaceface {
+  display: inline-block; /* O block, según tu diseño */
+  width: 40px; /* Ancho del icono */
+  height: 10px; /* Alto del icono */
+  background-image: url("../../img/facebook2.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
+  text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
+  overflow: hidden; /* Asegura que el texto oculto no cause problemas */
+  padding: 18px;
+  opacity: 0.9;
+}
+header .icono-enlaceface:hover {
+  opacity: 0.5;
+}
+header .icono-enlaceinsta {
+  display: inline-block; /* O block, según tu diseño */
+  width: 40px; /* Ancho del icono */
+  height: 10px; /* Alto del icono */
+  background-image: url("../../img/instagram2.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
+  text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
+  overflow: hidden; /* Asegura que el texto oculto no cause problemas */
+  padding: 18px;
+  opacity: 0.9;
+}
+header .icono-enlaceinsta:hover {
+  opacity: 0.5;
+}
+header .nav-item:hover {
+  background-color: aquamarine;
+}
+header .navbar-brand:hover {
+  background-color: aquamarine;
+}
 
-main .p__principal {
-  font-family: "Overlock", serif;
-  font-weight: 1200;
-  font-style: italic;
-  color: green;
-  text-align: left;
-  font-size: 20px;
-  padding: 20px;
-}
-@media (min-width: 1200px) {
-  main .p__principal {
-    font-family: "Overlock", serif;
-    font-weight: 1200;
-    font-style: italic;
-    color: green;
-    text-align: left;
-    font-size: 22px;
-    padding: 20px;
-  }
-}
-@media (min-width: 1400px) {
-  main .p__principal {
-    font-family: "Overlock", serif;
-    font-weight: 1200;
-    font-style: italic;
-    color: green;
-    text-align: left;
-    font-size: 24px;
-    padding: 20px;
-  }
-}
 main .zoom {
   overflow: hidden;
 }
@@ -187,6 +211,54 @@ main p {
 .contenido {
   /* Estilos para el contenido principal */
   height: auto; /* Ejemplo para generar scroll */
+}
+
+.whatsapp-flotante {
+  position: fixed; /* Lo fija a la ventana del navegador */
+  bottom: 100px; /* Distancia desde la parte inferior */
+  right: 20px; /* Distancia desde la derecha */
+  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  display: block;
+  width: 60px; /* Ancho del botón */
+  height: 60px; /* Alto del botón */
+  border-radius: 50%; /* Lo hace circular */
+  overflow: hidden; /* Oculta cualquier contenido que se salga del círculo */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+}
+
+.whatsapp-flotante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+/* Opcional: Animación al pasar el ratón */
+.whatsapp-flotante:hover {
+  opacity: 0.8;
+}
+
+.arriba {
+  position: fixed; /* Lo fija a la ventana del navegador */
+  bottom: 200px; /* Distancia desde la parte inferior */
+  right: 20px; /* Distancia desde la derecha */
+  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  display: block;
+  width: 60px; /* Ancho del botón */
+  height: 60px; /* Alto del botón */
+  border-radius: 50%; /* Lo hace circular */
+  overflow: hidden; /* Oculta cualquier contenido que se salga del círculo */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+}
+
+.arriba img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+/* Opcional: Animación al pasar el ratón */
+.arriba:hover {
+  opacity: 0.8;
 }
 
 /*

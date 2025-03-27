@@ -1,65 +1,86 @@
 @use '_variables';
 @use '_font';
+@use '_iconos';
 
-footer{
-    padding: 20px;
-    position:sticky;
-   .contacto {
-        p{
-            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,small);
-        }
-        h4{
-            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,large);
-        }
-    }
-
-    .redes {
-        p{
-            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, rigth,small);
-        }
-        h4{
-            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, rigth,large);
-        }
-        
-    }
-
-   h5{
-     @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, center,large);
-    }
- 
-    
+footer {
     background-image: linear-gradient(to top, variables.$secondary-color, white);
+    color: variables.$primary-color;
+    padding: 20px;
+    text-align: center;
+  
+    .contenedor {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+     
 
-    @media (min-width: 750px){
+      // Definición de las áreas del grid para el diseño base (móvil)
+      grid-template-areas:
+        "contacto"
+        "redes"
+        "derecho";
+  
+      // Asignación de las áreas a los elementos
+      .contacto {
+        grid-area: contacto;
+      }
+      .redes {
+        grid-area: redes;
+      }
+      .derecho{
+        grid-area: derecho;
+      }
+      
+    }
+  
+    .contenedor {
+      padding: 15px;
+  
+      h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: black;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 5px;
+        }
+      }
+  
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  
+    .derecho {
+      padding-top: 15px;
+      border-top: 1px solid #555;
+      font-size: 0.9em;
+    }
+  
+
+    // Pantallas Medianas (Tablets)
+    @media (min-width: 576px) and (max-width: 992px) {
         .contenedor{
-          
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 100px auto;
-            grid-template-areas:
-                "contacto redes"
-                "derecho derecho";
-            column-gap: 20px;
-            row-gap: 10px;
-        }
-        
-        .contacto {
-            grid-area: contacto;
-           text-align: left;
-            margin: 20px
-        
-        }
-        
-        .redes {
-            grid-area: redes;
-            text-align: right;
-            margin:20px;
-        }
-        
-        .derecho {
-            grid-area: derecho;
-            text-align: center;
-        }
-        
-        }
-}
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "contacto redes"
+          "derecho derecho";
+        }}
+
+    // Pantallas Grandes (Desktops) - Ejemplo de tres columnas
+    @media (min-width: 992px) {
+        .contenedor{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-areas:
+          "contacto none redes" 
+          "derecho derecho derecho";
+        text-align: center; // Ajustar alineación en pantallas grandes
+      }}
+    }
+    

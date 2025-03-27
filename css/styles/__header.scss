@@ -1,5 +1,6 @@
 @use '_variables';
 @use '_font';
+@use '_iconos';
 header{
     h1{
         @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, center, xx-large);
@@ -7,6 +8,44 @@ header{
     .menu__principal{
         background-image: linear-gradient(to bottom, variables.$secondary-color, white);
     }
-   
+    .icono-enlacemail{
+        @include iconos.icono-enlace("../../img/gmail2.png");
+       
+      }   
+    .icono-enlacemail:hover{
+        opacity: 0.5;
+    }
+      .icono-enlacewhat{
+        @include iconos.icono-enlace("../../img/whatapps2.png");
+       
+      }
+      .icono-enlacewhat:hover{
+        opacity: 0.5;
+    }
+      .icono-enlaceface{
+        @include iconos.icono-enlace("../../img/facebook2.png");
+    }
+    .icono-enlaceface:hover{
+        opacity: 0.5;
+    }
+ 
+
+    .icono-enlaceinsta{
+        @include iconos.icono-enlace("../../img/instagram2.png");
+      
+      }
+  
+     .icono-enlaceinsta:hover{
+        opacity: 0.5;
+    } 
+    .nav-item:hover{    
+      background-color: variables.$secondary-color;
+    } 
+
+  .navbar-brand:hover{
+         
+    background-color: variables.$secondary-color;
+} 
+  
   
 }

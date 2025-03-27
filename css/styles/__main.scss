@@ -1,25 +1,7 @@
 @use '_variables';
 @use '_font';
 main{
- 
-    .p__principal{
-        @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,20px);
-        padding: 20px;
-        @media (min-width: 1200px){
-        
-            @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,22px);
-            padding: 20px;
-               
-            }
-            @media (min-width: 1400px){
-        
-                @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,24px);
-                padding: 20px;
-                   
-                }
-        }
-    
-
+   
     .zoom{
         overflow:hidden;
         .imagen{
@@ -80,3 +62,50 @@ p{ @include font.font-format(variables.$fonts-primary, 1200, italic, black, left
     /* Estilos para el contenido principal */
     height: auto; /* Ejemplo para generar scroll */
   }
+
+  .whatsapp-flotante {
+    position: fixed; /* Lo fija a la ventana del navegador */
+    bottom: 100px;    /* Distancia desde la parte inferior */
+    right: 20px;     /* Distancia desde la derecha */
+    z-index: 9999;   /* Asegura que esté por encima de otros elementos */
+    display: block;
+    width: 60px;     /* Ancho del botón */
+    height: 60px;    /* Alto del botón */
+    border-radius: 50%; /* Lo hace circular */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del círculo */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+}
+
+.whatsapp-flotante img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+/* Opcional: Animación al pasar el ratón */
+.whatsapp-flotante:hover {
+    opacity: 0.8;
+}
+.arriba {
+    position: fixed; /* Lo fija a la ventana del navegador */
+    bottom: 200px;    /* Distancia desde la parte inferior */
+    right: 20px;     /* Distancia desde la derecha */
+    z-index: 9999;   /* Asegura que esté por encima de otros elementos */
+    display: block;
+    width: 60px;     /* Ancho del botón */
+    height: 60px;    /* Alto del botón */
+    border-radius: 50%; /* Lo hace circular */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del círculo */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+}
+
+.arriba img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+/* Opcional: Animación al pasar el ratón */
+.arriba:hover {
+    opacity: 0.8;
+}

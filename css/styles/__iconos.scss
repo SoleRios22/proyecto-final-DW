@@ -1,0 +1,18 @@
+@mixin icono-enlace($url) {
+    display: inline-block; /* O block, según tu diseño */
+    width: 40px; /* Ancho del icono */
+    height: 10px; /* Alto del icono */
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
+    text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
+    overflow: hidden; /* Asegura que el texto oculto no cause problemas */
+    padding: 18px;
+    opacity:0.9;
+    
+  }
+
+  @mixin flotantes($url)
+  {
+    
+  }
