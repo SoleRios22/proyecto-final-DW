@@ -15,11 +15,12 @@ main{
   
 .list-group {
     .active{
-    background-color: variables.$secondary-color;
-    color: black;
-    border:variables.$primary-color;
-}
-}
+        background-color: variables.$secondary-color;
+        color: black;
+        border:variables.$primary-color;
+     }
+    }
+
 .card-title{
     @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, center,22px);
 
@@ -38,17 +39,6 @@ p{ @include font.font-format(variables.$fonts-primary, 1200, italic, black, left
 
 
 
-.container-anima{ 
-    padding:30px;
-    align-items: center;
-    #hermanos {
-    position: absolute;
-    transition: 0.5s;
-}
-}
- #hermanos:hover{
-    opacity:0;
- }
 
  .lista {
     padding: 40px;
