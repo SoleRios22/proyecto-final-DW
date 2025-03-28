@@ -60,13 +60,16 @@ footer .derecho {
   }
 }
 
+header {
+  background-image: linear-gradient(to bottom, aquamarine, white);
+}
 header h1 {
   font-family: "Overlock", serif;
-  font-weight: 1200;
+  font-weight: bolder;
   font-style: italic;
   color: green;
   text-align: center;
-  font-size: xx-large;
+  font-size: xxx-large;
 }
 header .menu__principal {
   background-image: linear-gradient(to bottom, aquamarine, white);
@@ -80,7 +83,7 @@ header .icono-enlacemail {
   background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
   text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
   overflow: hidden; /* Asegura que el texto oculto no cause problemas */
-  padding: 18px;
+  padding: 14px;
   opacity: 0.9;
 }
 header .icono-enlacemail:hover {
@@ -95,7 +98,7 @@ header .icono-enlacewhat {
   background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
   text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
   overflow: hidden; /* Asegura que el texto oculto no cause problemas */
-  padding: 18px;
+  padding: 14px;
   opacity: 0.9;
 }
 header .icono-enlacewhat:hover {
@@ -110,7 +113,7 @@ header .icono-enlaceface {
   background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
   text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
   overflow: hidden; /* Asegura que el texto oculto no cause problemas */
-  padding: 18px;
+  padding: 14px;
   opacity: 0.9;
 }
 header .icono-enlaceface:hover {
@@ -125,7 +128,7 @@ header .icono-enlaceinsta {
   background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
   text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
   overflow: hidden; /* Asegura que el texto oculto no cause problemas */
-  padding: 18px;
+  padding: 14px;
   opacity: 0.9;
 }
 header .icono-enlaceinsta:hover {
@@ -215,195 +218,48 @@ main p {
 
 .whatsapp-flotante {
   position: fixed; /* Lo fija a la ventana del navegador */
-  bottom: 100px; /* Distancia desde la parte inferior */
+  bottom: 200px; /* Distancia desde la parte inferior */
   right: 20px; /* Distancia desde la derecha */
   z-index: 9999; /* Asegura que esté por encima de otros elementos */
   display: block;
-  width: 60px; /* Ancho del botón */
-  height: 60px; /* Alto del botón */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
   border-radius: 50%; /* Lo hace circular */
   overflow: hidden; /* Oculta cualquier contenido que se salga del círculo */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
 }
-
 .whatsapp-flotante img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
 }
 
-/* Opcional: Animación al pasar el ratón */
+/*Animación al pasar el ratón */
 .whatsapp-flotante:hover {
   opacity: 0.8;
 }
 
 .arriba {
   position: fixed; /* Lo fija a la ventana del navegador */
-  bottom: 200px; /* Distancia desde la parte inferior */
+  bottom: 150px; /* Distancia desde la parte inferior */
   right: 20px; /* Distancia desde la derecha */
   z-index: 9999; /* Asegura que esté por encima de otros elementos */
   display: block;
-  width: 60px; /* Ancho del botón */
-  height: 60px; /* Alto del botón */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
   border-radius: 50%; /* Lo hace circular */
   overflow: hidden; /* Oculta cualquier contenido que se salga del círculo */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
 }
-
 .arriba img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
 }
 
-/* Opcional: Animación al pasar el ratón */
+/*Animación al pasar el ratón */
 .arriba:hover {
   opacity: 0.8;
 }
-
-/*
-header{
-    h1{
-        @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, center, xx-large);
-     }
-    .menu__principal{
-        background-image: linear-gradient(to bottom, variables.$secondary-color, white);
-    }
-
-
-}
-
-main{
-
-    .p__principal{
-        @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,20px);
-        padding: 20px;
-        @media (min-width: 1200px){
-
-            @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,22px);
-            padding: 20px;
-
-            }
-            @media (min-width: 1400px){
-
-                @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, left,24px);
-                padding: 20px;
-
-                }
-        }
-
-
-    .zoom{
-        overflow:hidden;
-        .imagen{
-            transition:0.35;
-        }
-        .imagen:hover{
-            transform:scale(2);
-        }
-    }
-
-.list-group {
-    .active{
-    background-color: variables.$secondary-color;
-    color: black;
-    border:variables.$primary-color;
-}
-}
-.card-title{
-    @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, center,22px);
-
-}
-.card-text{
-    @include font.font-format(variables.$fonts-primary, 1200, normal, black, left,18px);
-}
-
-h3{
-    @include font.font-format(variables.$fonts-primary, 1400, italic, variables.$primary-color, center,24px);
-    padding: 20px;
-}
-
-p{ @include font.font-format(variables.$fonts-primary, 1200, italic, black, left,18px);}
-}
-
-
-
-.container-anima{ 
-    padding:30px;
-    align-items: center;
-    #hermanos {
-    position: absolute;
-    transition: 0.5s;
-}
-}
- #hermanos:hover{
-    opacity:0;
- }
-
-
-
-footer{
-    padding: 20px;
-   .contacto {
-        p{
-            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,small);
-        }
-        h4{
-            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, left,large);
-        }
-    }
-
-    .redes {
-        p{
-            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, rigth,small);
-        }
-        h4{
-            @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, rigth,large);
-        }
-
-    }
-
-   h5{
-     @include font.font-format(variables.$fonts-primary, 700, normal, variables.$primary-color, center,large);
-    }
-
-
-    background-image: linear-gradient(to top, variables.$secondary-color, white);
-
-    @media (min-width: 750px){
-        .contenedor{
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 100px auto;
-            grid-template-areas:
-                "contacto redes"
-                "derecho derecho";
-            column-gap: 20px;
-            row-gap: 10px;
-        }
-
-        .contacto {
-            grid-area: contacto;
-           text-align: left;
-            margin: 20px
-
-        }
-
-        .redes {
-            grid-area: redes;
-            text-align: right;
-            margin:20px;
-        }
-
-        .derecho {
-            grid-area: derecho;
-            text-align: center;
-        }
-
-        }
-}
-
-*/
 
 /*# sourceMappingURL=style.css.map */

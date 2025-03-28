@@ -7,12 +7,27 @@
     background-size: contain; /* Ajusta el tamaño del icono dentro del contenedor */
     text-indent: -9999px; /* Oculta cualquier texto dentro del enlace */
     overflow: hidden; /* Asegura que el texto oculto no cause problemas */
-    padding: 18px;
+    padding: 14px;
     opacity:0.9;
     
   }
 
-  @mixin flotantes($url)
-  {
-    
+  
+  @mixin boton-ir-arriba ($botton){
+    position: fixed; /* Lo fija a la ventana del navegador */
+    bottom: $botton;  /* Distancia desde la parte inferior */
+    right: 20px;    /* Distancia desde la derecha */
+    z-index: 9999;  /* Asegura que esté por encima de otros elementos */
+    display: block;
+    width: 40px;    /* Ancho del botón */
+    height: 40px;   /* Alto del botón */
+    border-radius: 50%; /* Lo hace circular */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del círculo */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+    }
   }
