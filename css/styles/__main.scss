@@ -13,62 +13,62 @@ main{
         }
     }
   
-.list-group {
-    .active{
-        background-color: variables.$secondary-color;
-        color: black;
-        border:variables.$primary-color;
-     }
+    .list-group {
+    
+        .active{
+            background-color: variables.$secondary-color;
+            color: black;
+            border:variables.$primary-color;
+        }
     }
 
-.card-title{
-    @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, center,22px);
+    .card-title{
+        @include font.font-format(variables.$fonts-primary, 1200, italic, variables.$primary-color, center,22px);
+    }
 
-}
-.card-text{
-    @include font.font-format(variables.$fonts-primary, 1200, normal, black, left,18px);
-}
+    .card-text{
+        @include font.font-format(variables.$fonts-primary, 1200, normal, black, left,18px);
+    }
 
-h3{
-    @include font.font-format(variables.$fonts-primary, 1400, italic, variables.$primary-color, center,24px);
-    padding: 20px;
-}
+    h3{
+        @include font.font-format(variables.$fonts-primary, 1400, italic, variables.$primary-color, center,24px);
+        padding: 20px;
+    }
 
-p{ @include font.font-format(variables.$fonts-primary, 1200, italic, black, left,18px);}
-}
+    p{ 
+        @include font.font-format(variables.$fonts-primary, 1200, italic, black, left,18px);
+    }
 
-
-
-
- .lista {
-    padding: 40px;
-    position: sticky;
-    top:40px; /* Asegura que se pegue a la parte superior */
-    background-color: white; /* O el color de fondo que prefieras */
-    z-index: 100; /* Asegura que esté por encima del contenido */
-    /* Otros estilos para la barra de navegación */
-  }
-  
-  .contenido {
-    /* Estilos para el contenido principal */
-    height: auto; /* Ejemplo para generar scroll */
-  }
-
-  .whatsapp-flotante {
-    @include iconos.boton-ir-arriba(200px);
+    @media (min-width: 768px){
+    .lista {
+        padding: 40px;
+        position: sticky;
+        top:70px; /* Asegura que se pegue a la parte superior */
+        background-color: white; /* O el color de fondo que prefieras */
+        z-index: 100; /* Asegura que esté por encima del contenido */
+    }
+    }
     
-}
+    .contenido {
+        height: auto; /* Ejemplo para generar scroll */
+    }
+
+    .whatsapp-flotante {
+        @include iconos.boton-ir-arriba(200px);
+    
+    }
 
 /*Animación al pasar el ratón */
-.whatsapp-flotante:hover {
-    opacity: 0.8;
-}
+    .whatsapp-flotante:hover {
+        opacity: 0.8;
+    }
 
-.arriba{
-    @include iconos.boton-ir-arriba(150px);
-}
+    .arriba{
+        @include iconos.boton-ir-arriba(150px);
+    }
 
-/*Animación al pasar el ratón */
-.arriba:hover {
-    opacity: 0.8;
+    /*Animación al pasar el ratón */
+    .arriba:hover {
+        opacity: 0.8;
+    }
 }
